@@ -28,13 +28,3 @@ print(f"Total:  ${sum(profitLoss)}")
 print(f"Average Change: ${round(sum(profitLossChange)/len(profitLossChange),2)}")
 print(f"Greatest Increase in Profits: {Months[maxIncreaseMonth]} (${(str(maxIncrease))})")
 print(f"Greatest Decrease in Profits: {Months[maxDecreaseMonth]} (${(str(maxDecrease))})")
-
-textfile = os.path.join("Analysis.txt")
-with open(textfile, 'w') as txtfile:
-    print("Financial Analysis", file=txtfile)
-    print("------------------------------------", file=txtfile)
-    print(f"Total Months: {len(Months)}", file=txtfile)
-    print(f"Total:  ${sum(profitLoss)}", file=txtfile)
-    print(f"Average Change: ${round(sum(profitLossChange)/len(profitLossChange),2)}", file=txtfile)
-    print(f"Greatest Increase in Profits: {Months[maxIncreaseMonth]} (${(str(maxIncrease))})", file=txtfile)
-    print(f"Greatest Decrease in Profits: {Months[maxDecreaseMonth]} (${(str(maxDecrease))})", file=txtfile)
